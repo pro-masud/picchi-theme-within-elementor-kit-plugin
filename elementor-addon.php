@@ -13,10 +13,12 @@
 	require_once( __DIR__ . '/widgets/widget-1.php' );
 	require_once( __DIR__ . '/widgets/widget-2.php' );
 	require_once( __DIR__ . '/widgets/widget-3.php' );
+	require_once( __DIR__ . '/widgets/widget-4.php' );
 
 	$widgets_manager -> register( new \Widget_1() );
 	$widgets_manager -> register( new \Widgets_2() );
 	$widgets_manager -> register( new \Select3() );
+	$widgets_manager -> register( new \Choose_Type() );
 
 }
 add_action( 'elementor/widgets/register', 'register_hello_world_widget' );
