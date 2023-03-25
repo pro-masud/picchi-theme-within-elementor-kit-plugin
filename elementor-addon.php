@@ -19,6 +19,8 @@
 	require_once( __DIR__ . '/widgets/widget-7.php' );
 	require_once( __DIR__ . '/widgets/widget-8.php' );
 	require_once( __DIR__ . '/widgets/widget-9.php' );
+	require_once( __DIR__ . '/widgets/widget-11.php' );
+	//require_once( __DIR__ . '/widgets/widget-10.php' );
 
 	$widgets_manager -> register( new \Widget_1() );
 	$widgets_manager -> register( new \Widgets_2() );
@@ -29,6 +31,8 @@
 	$widgets_manager -> register( new \Icon_controls() );
 	$widgets_manager -> register( new \font_controls() );
 	$widgets_manager -> register( new \slider_demo() );
+	$widgets_manager -> register( new \HoverEnemations() );
+	//$widgets_manager -> register( new \Typography_controls() );
 
 }
 add_action( 'elementor/widgets/register', 'register_hello_world_widget' );
