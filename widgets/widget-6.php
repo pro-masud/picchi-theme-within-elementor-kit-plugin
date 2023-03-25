@@ -2,7 +2,7 @@
 class ImageGallery extends \Elementor\Widget_Base {
 
 	public function get_name() {
-		return 'hello_world_widget_5';
+		return 'hello_world_widget_60';
 	}
 
 	public function get_title() {
@@ -28,7 +28,7 @@ class ImageGallery extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'section_title',
 			[
-				'label' => esc_html__( 'Image Width And Height', 'elementor-addon' ),
+				'label' => esc_html__( 'Gallery', 'elementor-addon' ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -55,6 +55,18 @@ class ImageGallery extends \Elementor\Widget_Base {
 	}
 
 	protected function _content_template(){
-		
+
+		?>
+		<#
+		_.each( settings.gallery_img , function(image){
+
+			#>
+				<img src="{{{image.url}}}" >
+			<#
+
+		});
+
+		#>
+		<?php 
 	}
 }

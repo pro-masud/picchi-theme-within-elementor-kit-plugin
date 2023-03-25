@@ -15,12 +15,18 @@
 	require_once( __DIR__ . '/widgets/widget-3.php' );
 	require_once( __DIR__ . '/widgets/widget-4.php' );
 	require_once( __DIR__ . '/widgets/widget-5.php' );
+	require_once( __DIR__ . '/widgets/widget-6.php' );
+	require_once( __DIR__ . '/widgets/widget-7.php' );
+	require_once( __DIR__ . '/widgets/widget-8.php' );
 
 	$widgets_manager -> register( new \Widget_1() );
 	$widgets_manager -> register( new \Widgets_2() );
 	$widgets_manager -> register( new \Select3() );
 	$widgets_manager -> register( new \Choose_Type() );
 	$widgets_manager -> register( new \Image_demension() );
+	$widgets_manager -> register( new \ImageGallery() );
+	$widgets_manager -> register( new \Icon_controls() );
+	$widgets_manager -> register( new \font_controls() );
 
 }
 add_action( 'elementor/widgets/register', 'register_hello_world_widget' );
