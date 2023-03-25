@@ -18,6 +18,7 @@
 	require_once( __DIR__ . '/widgets/widget-6.php' );
 	require_once( __DIR__ . '/widgets/widget-7.php' );
 	require_once( __DIR__ . '/widgets/widget-8.php' );
+	require_once( __DIR__ . '/widgets/widget-9.php' );
 
 	$widgets_manager -> register( new \Widget_1() );
 	$widgets_manager -> register( new \Widgets_2() );
@@ -27,6 +28,7 @@
 	$widgets_manager -> register( new \ImageGallery() );
 	$widgets_manager -> register( new \Icon_controls() );
 	$widgets_manager -> register( new \font_controls() );
+	$widgets_manager -> register( new \slider_demo() );
 
 }
 add_action( 'elementor/widgets/register', 'register_hello_world_widget' );
