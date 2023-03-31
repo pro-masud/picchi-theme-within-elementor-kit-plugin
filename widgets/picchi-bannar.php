@@ -7,11 +7,11 @@ class Header_bannar extends \Elementor\Widget_Base{
 	}
 
 	public function get_title() {
-		return esc_html__( 'Hello World 1', 'picchi_extrantion' );
+		return esc_html__( 'Header Bannar', 'picchi_extrantion' );
 	}
 
 	public function get_icon() {
-		return 'eicon-code';
+		return 'eicon-t-letter';
 	}
 
 	public function get_categories() {

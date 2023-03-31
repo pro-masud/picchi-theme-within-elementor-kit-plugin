@@ -11,8 +11,12 @@
  function register_hello_world_widget( $widgets_manager ) {
 
 	require_once( __DIR__ . '/widgets/picchi-bannar.php' );
+	require_once( __DIR__ . '/widgets/picchi-heading.php' );
+	require_once( __DIR__ . '/widgets/picchi-about-description.php' );
 
 	$widgets_manager -> register( new \Header_bannar() );
+	$widgets_manager -> register( new \Picchi_heading() );
+	$widgets_manager -> register( new \About_Description() );
 	
 
 }
