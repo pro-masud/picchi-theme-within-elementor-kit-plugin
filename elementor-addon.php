@@ -14,11 +14,15 @@
 	require_once( __DIR__ . '/widgets/picchi-heading.php' );
 	require_once( __DIR__ . '/widgets/picchi-about-description.php' );
 	require_once( __DIR__ . '/widgets/picchi-digital-feacher.php' );
+	require_once( __DIR__ . '/widgets/picch-work-process.php' );
+	require_once( __DIR__ . '/widgets/picch-project.php' );
 
 	$widgets_manager -> register( new \Header_bannar() );
 	$widgets_manager -> register( new \Picchi_heading() );
 	$widgets_manager -> register( new \About_Description() );
 	$widgets_manager -> register( new \Picchi_Digital() );
+	$widgets_manager -> register( new \Picchi_work_process() );
+	$widgets_manager -> register( new \Picchi_project() );
 	
 
 }
