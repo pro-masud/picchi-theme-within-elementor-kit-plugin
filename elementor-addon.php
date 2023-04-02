@@ -13,10 +13,12 @@
 	require_once( __DIR__ . '/widgets/picchi-bannar.php' );
 	require_once( __DIR__ . '/widgets/picchi-heading.php' );
 	require_once( __DIR__ . '/widgets/picchi-about-description.php' );
+	require_once( __DIR__ . '/widgets/picchi-digital-feacher.php' );
 
 	$widgets_manager -> register( new \Header_bannar() );
 	$widgets_manager -> register( new \Picchi_heading() );
 	$widgets_manager -> register( new \About_Description() );
+	$widgets_manager -> register( new \Picchi_Digital() );
 	
 
 }

@@ -1,13 +1,13 @@
 <?php
 
-class Picchi_heading extends \Elementor\Widget_Base{
+class Picchi_Digital extends \Elementor\Widget_Base{
 
 	public function get_name() {
-		return 'picchi_heading';
+		return 'picchi_digital';
 	}
 
 	public function get_title() {
-		return esc_html__( 'Picchi Heading', 'picchi_extrantion' );
+		return esc_html__( 'Picchi Digital Feacher', 'picchi_extrantion' );
 	}
 
 	public function get_icon() {
@@ -19,35 +19,27 @@ class Picchi_heading extends \Elementor\Widget_Base{
 	}
 
 	public function get_keywords() {
-		return [ 'heading', 'title' ];
+		return [ 'digital', 'feacher box' ];
 	}
 
 	protected function register_controls(){
 		//Tab Contect Start Now
 		$this->start_controls_section(
 			'heading_section_title',[
-			'label' => esc_html( 'Header', 'picchi_extrantion'),
+			'label' => esc_html( 'Content', 'picchi_extrantion'),
 			'tab'	=>  \Elementor\Controls_Manager::TAB_CONTENT,
 		]);
 
 		//header header
-		$this -> add_control('heading_title',[
+		$this -> add_control('digital_title',[
 			'label'		=> esc_html('Title', 'picchi_extrantion'),
 			'label_block'	=> true,
 			'type'			=> \Elementor\Controls_Manager::TEXT,
 			'default'		=>  esc_html('Title', 'picchi_extrantion'),
 		]);
 
-		//header Sub Title
-		$this -> add_control('heading_sub_title',[
-			'label'		=> esc_html('Sub Title', 'picchi_extrantion'),
-			'label_block'	=> true,
-			'type'			=> \Elementor\Controls_Manager::TEXT,
-			'default'		=>  esc_html('Write Title', 'picchi_extrantion'),
-		]);
-
 		//header Description Title
-		$this -> add_control('heading_description',[
+		$this -> add_control('digital_description',[
 			'label'		=> esc_html('Description', 'picchi_extrantion'),
 			'label_block'	=> true,
 			'type'			=> \Elementor\Controls_Manager::TEXTAREA,
@@ -56,7 +48,7 @@ class Picchi_heading extends \Elementor\Widget_Base{
 		]);
 
 
-		$this-> add_control('heading_text_align',[
+		$this-> add_control('digital_text_align',[
 			'label'		=> __('Text Alignment','picchi_extrantion'),
 			'type'		=> \Elementor\Controls_manager::CHOOSE,
 			'description'	=> esc_html('Text Align', 'picchi_extrantion'),
@@ -78,7 +70,7 @@ class Picchi_heading extends \Elementor\Widget_Base{
 				],
 			],
 			'selectors'		=> [
-				'{{WRAPPER}}  .section-title' => "text-align:{{VALUE}}",
+				'{{WRAPPER}}  .feature-box' => "text-align:{{VALUE}}",
 			]
 		]
 			
@@ -101,18 +93,18 @@ class Picchi_heading extends \Elementor\Widget_Base{
 		);
 
 		$this->add_control(
-			'title_heading',[
+			'digital_title',[
 			'label' => esc_html( 'Title', 'picchi_extrantion'),
 			'type'	=>  \Elementor\Controls_Manager::HEADING,
 			'separator'	=> 'before'
 		]);
 
 
-		$this -> add_control('bannar_color',[
+		$this -> add_control('digital_color',[
 			'label'		=> esc_html('Color', 'picchi_extrantion'),
 			'type'			=> \Elementor\Controls_Manager::COLOR,
 			'selectors'	=>[
-				'{{WRAPPER}} h2' => 'color: {{VALUE}}'
+				'{{WRAPPER}} h5' => 'color: {{VALUE}}'
 			],
 		]);
 
@@ -121,42 +113,11 @@ class Picchi_heading extends \Elementor\Widget_Base{
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name'		=> 'header_styleing',
-				'selector'	=> '{{WRAPPER}} h2',
+				'selector'	=> '{{WRAPPER}} h5',
 			]
 		);
 
 		
-
-
-
-
-		// sub title 
-		$this->add_control(
-			'title_sub_heading',[
-			'label' => esc_html( 'Sub Title', 'picchi_extrantion'),
-			'type'	=>  \Elementor\Controls_Manager::HEADING,
-			'separator'	=> 'before'
-		]);
-
-		$this -> add_control('bannar_sub_color',[
-			'label'		=> esc_html('Color', 'picchi_extrantion'),
-			'type'			=> \Elementor\Controls_Manager::COLOR,
-			'selectors'	=>[
-				'{{WRAPPER}} h4' => 'color: {{VALUE}}'
-			],
-		]);
-
-
-		$this -> add_group_control(
-			\Elementor\Group_Control_Typography::get_type(),
-			[
-				'name'		=> 'header_sub_title',
-				'selector'	=> '{{WRAPPER}} h4',
-			]
-		);
-
-
-
 		// description
 		$this->add_control(
 			'description_heading',[
@@ -216,29 +177,18 @@ class Picchi_heading extends \Elementor\Widget_Base{
 
 		$settings = $this -> get_settings_for_display();
 
-		$heading_title = $settings['heading_title'];
-		$heading_sub_title = $settings['heading_sub_title'];
-		$heading_description = $settings['heading_description'];
+		$digital_title = $settings['digital_title'];
+		$digital_description = $settings['digital_description'];
 	?>
-
-		<div class="section-title">
-			<h4><?php echo $heading_sub_title; ?></h4>
-			<h2><?php echo $heading_title; ?></h2>
-			<p><?php echo $heading_description; ?></p>
+		<div class="feature-box">
+			<i class="far fa-newspaper"></i>
+			<h5><?php echo $digital_title; ?></h5>
+			<p><?php echo $digital_description; ?></p>
 		</div>
 
 	<?php
 		
 	}
 
-	protected function _content_template(){
-		?>
-		<div class="section-title">
-			<h4>{{{settings.heading_sub_title}}}</h4>
-			<h2>{{{settings.heading_title}}}</h2>
-			<p>{{{settings.heading_description}}}</p>
-		</div>
-		
-		<?php 
-	}
+	
 }
