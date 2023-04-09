@@ -18,6 +18,7 @@
 	require_once( __DIR__ . '/widgets/picch-project.php' );
 	require_once( __DIR__ . '/widgets/picch-counter.php' );
 	require_once( __DIR__ . '/widgets/picch-team.php' );
+	require_once( __DIR__ . '/widgets/picch-video.php' );
 
 	$widgets_manager -> register( new \Header_bannar() );
 	$widgets_manager -> register( new \Picchi_heading() );
@@ -27,6 +28,7 @@
 	$widgets_manager -> register( new \Picchi_project() );
 	$widgets_manager -> register( new \Picchi_Counter() );
 	$widgets_manager -> register( new \Picchi_Team() );
+	$widgets_manager -> register( new \Picchi_video() );
 	
 
 }
