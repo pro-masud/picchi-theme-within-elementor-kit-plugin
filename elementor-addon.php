@@ -19,6 +19,9 @@
 	require_once( __DIR__ . '/widgets/picch-counter.php' );
 	require_once( __DIR__ . '/widgets/picch-team.php' );
 	require_once( __DIR__ . '/widgets/picch-video.php' );
+	require_once( __DIR__ . '/widgets/picch-price.php' );
+	require_once( __DIR__ . '/widgets/picch-qourt.php' );
+	require_once( __DIR__ . '/widgets/picch-lates-post.php' );
 
 	$widgets_manager -> register( new \Header_bannar() );
 	$widgets_manager -> register( new \Picchi_heading() );
@@ -29,6 +32,9 @@
 	$widgets_manager -> register( new \Picchi_Counter() );
 	$widgets_manager -> register( new \Picchi_Team() );
 	$widgets_manager -> register( new \Picchi_video() );
+	$widgets_manager -> register( new \Picchi_Price_Table() );
+	$widgets_manager -> register( new \Picchi_quert() );
+	$widgets_manager -> register( new \Picchi_Lates_post() );
 	
 
 }
