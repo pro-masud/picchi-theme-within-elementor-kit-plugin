@@ -23,6 +23,8 @@
 	require_once( __DIR__ . '/widgets/picch-qourt.php' );
 	require_once( __DIR__ . '/widgets/picch-lates-post.php' );
 	require_once( __DIR__ . '/widgets/picch-button.php' );
+	require_once( __DIR__ . '/widgets/picch-address.php' );
+	require_once( __DIR__ . '/widgets/picch-contact-box.php' );
 
 	$widgets_manager -> register( new \Header_bannar() );
 	$widgets_manager -> register( new \Picchi_heading() );
@@ -37,6 +39,8 @@
 	$widgets_manager -> register( new \Picchi_quert() );
 	$widgets_manager -> register( new \Picchi_Lates_post() );
 	$widgets_manager -> register( new \Picchi_Button() );
+	$widgets_manager -> register( new \Picchi_Address() );
+	$widgets_manager -> register( new \Picchi_Contact_Box() );
 	
 
 }
